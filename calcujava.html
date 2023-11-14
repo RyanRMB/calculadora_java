@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <title>calculadora java</title>
     <script>
@@ -14,11 +13,41 @@
         <input type="submit" value="Resultado" id="result">
     </form>
     <script>
-        document.getElementById("op");
-        var num1 = document.getElementById("num1").value;
-        var num2= document.getElementById("textinput").value;
-        var resultado= num1+num2;
-        alert("Resultado: " + result);
+        const button = document.getElementById("result");
+        button.addEventListener("click", operacao);
+        fuction operacao (event)
+        {
+            var oper = document.getElementById("op").value;
+            var num1 = Number (document.getElementById("num1").value);
+            var num2= Number (document.getElementById("textinput").value);
+            
+            switch (oper){
+
+                case '+':
+                    var resultado= num1+num2;
+                    alert("Resultado: " + resultado);
+                    break;
+                
+                case '-':
+                    var resultado= num1-num2;
+                    alert("Resultado: " + resultado);
+                    break;
+
+                case '*':
+                    var resultado= num1*num2;
+                    alert("Resultado: " + resultado);
+                    break;
+
+                case '/':
+                    var resultado= num1/num2;
+                    alert("Resultado: " + resultado);
+                    break;
+                    
+                default:
+                    alert("Insira um operador válido!");
+                    break;
+            };
+        }    
     </script>
 </body>
 
